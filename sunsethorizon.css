@@ -1,0 +1,208 @@
+html {
+
+  margin: 0;
+  font-size: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Century Gothic',  sans-serif;
+  display: inline-block;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0;
+
+}
+
+#nav_bar {
+  width: 100vw;
+  height: 70px;
+  background-color: #000000;
+  z-index: 2;
+  position: fixed;
+}
+
+#menu {
+  list-style-type: none;
+  font-size: 22px;
+  line-height: 130%;
+  cursor: default;
+  top: 20px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%); /*positioning the menu centre according to elements width*/
+}
+
+#menu li {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+#menu li a {
+  text-decoration: none;
+  margin: 0;
+  color: #a5a5a4;
+}
+
+#menu li a:hover {
+  opacity: 0.5;
+}
+
+#parallax_wrapper {
+  position: relative;
+  width: 100vw;
+  left: 0;
+  margin: 0;
+  top: 70px;
+}
+
+.parallax_image {
+  display: inline-block;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 500px;
+  position: relative;
+  font-size: 16px;
+}
+
+#parallax_image_newzealand {
+  background-image: url('https://i.imgur.com/YLXSjHl.jpg');
+}
+
+#parallax_image_italy {
+  background-image: url('https://i.imgur.com/lw0cgTi.jpg');
+}
+
+#parallax_image_saintlucia {
+  background-image: url('https://i.imgur.com/XYpyZ7f.jpg');
+}
+
+#parallax_image_denmark {
+  background-image: url('https://i.imgur.com/u6zoVbF.jpg');
+}
+
+.parallax_link {
+  left: 50%;
+  top: 200px;
+  width: 200px;
+  position: absolute;
+  font-size: 36px;
+  text-align: center;
+  margin-left: -100px;
+  cursor: pointer;
+}
+
+.parallax_link a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+}
+
+#content {
+  position: relative;
+  width: 100vw;
+  background-color: white;
+  left: 0;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.country_info {
+  width: 20vw;
+  background-color: white;
+  display: none;
+  left: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 12px;
+  position: absolute;
+  line-height: 1.5;
+  /* jscript is making it position absolute, when its not fixed */
+}
+
+#grid {
+    width: 80vw;
+    box-sizing: border-box;
+    list-style-type: none;
+    display: none;
+    overflow-x: hidden;
+    float: right;
+    margin: 0;
+}
+
+.grid_list {
+    float: left;
+    width: 33.333%;
+    height: 140px;
+    overflow: hidden;
+    box-sizing: border-box; /*must be border box so that the border does not make images exceed 100% width*/
+    border: 2px white solid;
+    margin: 0;
+    cursor: pointer;
+}
+
+.grid_list:nth-of-type(12n+1),
+.grid_list:nth-of-type(12n+7) {
+  width: 66.666%;
+  height: 280px;
+}
+
+.grid_list:nth-of-type(12n+7) {
+  float: right;
+}
+
+.image_holder {
+  height: 100%;
+  display:flex;
+}
+
+.grid_photo {
+    width: 125%;  /* >100% so the longer landscape photos fill the whole tile*/
+    align-self: center;
+}
+
+.grid_photo:hover {
+  transform: scale(1.2);
+}
+
+#grid_photo_big_wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: black;
+  overflow: hidden;
+  display: none;
+  z-index: 3;
+}
+
+.grid_photo_big {
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  display: none;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#close {
+    position: relative;
+    top: 2%;
+    left: 95%;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#close:hover,
+#close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
